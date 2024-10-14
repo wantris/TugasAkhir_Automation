@@ -4,7 +4,9 @@
   "description": "Tugas Akhir Automation Testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx wdio run ./wdio.conf.js",
+    "generate-report": "allure generate reports/allure-results/ --clean & allure open",
+    "clean-report": "node cleanUpReport.js"
   },
   "author": "wantris",
   "license": "ISC",

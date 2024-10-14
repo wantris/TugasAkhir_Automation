@@ -4,17 +4,21 @@
         "invalidEmail": "evos@.com"
     },
     "validAccount":{
-        "name": "RRQ Store",
-        "email": "rrq11@gmail.com",
+        "name": "Jaya Bangun TB",
+        "email": "jayaa@gmail.com",
         "password": "rrq123"
     },
     "invalidAccount":{
-        "email": "rrq999999999999@gmail.com",
+        "email": "jaya99999@gmail.com",
         "password": "jaya123"
     },
     "loginErrMsg":{
         "invalidCredential": "Kredensial yang Anda berikan salah",
         "emptyEmail": "\"email\" is not allowed to be empty",
         "emptyPassword": "\"password\" is not allowed to be empty"
+    },
+    "category": {
+        "name": "Minuman",
+        "description": "Minuman"
     }
 }

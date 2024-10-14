@@ -8,23 +8,21 @@ Given('I am on the login page', async () => {
     await loginPage.open(`${baseConf.baseUrl}/login`);
 });
 
+When('I enter invalid credentials', async () => {
+    await loginPage.inputEmailField(`${baseConf.invalidAccount.email}`);
+    await loginPage.inputPasswordField(`${baseConf.validAccount.password}`);
+});
+
 When('I input valid credentials', async () => {
     await loginPage.inputEmailField(`${baseConf.validAccount.email}`);
     await loginPage.inputPasswordField(`${baseConf.validAccount.password}`);
 });
 
-When('I input invalid credentials', async () => {
-    await loginPage.inputEmailField(`${baseConf.invalidAccount.email}`);
-    await loginPage.inputPasswordField(`${baseConf.validAccount.password}`);
-});
-
 When('I input empty {string} field', async (param) => {
     if (param === "email") {
-        await loginPage.inputEmailField('');
         await loginPage.inputPasswordField(baseConf.validAccount.password);
     } else if (param === "password") {
         await loginPage.inputEmailField(baseConf.validAccount.email);
-        await loginPage.inputPasswordField('');
     }
 });
 

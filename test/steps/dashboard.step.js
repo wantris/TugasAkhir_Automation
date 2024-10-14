@@ -1,4 +1,4 @@
-const { Given, When, Then } = require('@wdio/cucumber-framework');
+const { Given, When, Then, BeforeStep} = require('@wdio/cucumber-framework');
 const { expect } = require('chai');
 const DashboardPage = require('../pages/dashboard.page');
 const LoginPage = require('../pages/login.page');
@@ -17,20 +17,19 @@ const typeCard = {
     "Total Pembelian": "total pembelian"
 };
 
-
-async function ensureLoggedIn() {
+async function checkLogin() {
     if (!isLoggedIn) {
         await loginPage.open(`${baseConf.baseUrl}/login`);
         await loginPage.inputEmailField(baseConf.validAccount.email);
         await loginPage.inputPasswordField(baseConf.validAccount.password);
         await loginPage.clickLoginButton();
+        await browser.pause(5000);
         isLoggedIn = true;
-        await browser.pause(6000);
     }
 }
 
 Given('I am on the dashboard page', async () => {
-    await ensureLoggedIn();
+    await checkLogin();
     await dashboardPage.open(`${baseConf.baseUrl}/dashboard`, isLoggedIn);
 });
 
