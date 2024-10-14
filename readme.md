@@ -4,6 +4,9 @@ Learn about automation testing using cucumber and WebDriver.io, and then generat
 
 By Wantrisnadi Gusti
 
+## Evidence
+Berikut link google drive berisi spreadsheet test scenario dan video running test https://drive.google.com/drive/folders/1VmtrWU18AhQRgU25YIBVwZ53iBM59v5c?usp=sharing
+
 ## Installation
 
 Use the NPM package manager .
@@ -25,6 +28,3 @@ npm run generate-report
 npm run clean-report
 
 ```
-
-## Evidence
-Berikut link google drive berisi spreadsheet test scenario dan video running test https://drive.google.com/drive/folders/1VmtrWU18AhQRgU25YIBVwZ53iBM59v5c?usp=sharing
